@@ -1,10 +1,11 @@
        .globl _tswitch
-       .globl _main,_running,_scheduler,_proc0,_procSize
+       .globl _main,_running,_scheduler
+       .globl _proc,_procSize
 	
 start:  mov  ax,cs
 	  mov  ds,ax
 	  mov  ss,ax
-        mov  sp,#_proc0
+        mov  sp,#_proc
 	  add  sp,_procSize
 	  call _main
         hlt
